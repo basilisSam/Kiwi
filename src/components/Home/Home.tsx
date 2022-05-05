@@ -1,9 +1,10 @@
+import { getWords } from "../../service/phoneWords";
 import KeyboardContainer from "../KeyboardContainer/KeyboardContainer";
 import PhoneScreen from "../PhoneScreen/PhoneScreen";
 
-type Props = {};
+const Home = () => {
+  
 
-const Home = (props: Props) => {
   const keysMap: any = {
     "1": ["📞"],
     "2": ["a", "b", "c"],
@@ -19,10 +20,17 @@ const Home = (props: Props) => {
     "#": ["⬆"],
   };
 
+  const handleNumberClick = (letters: any) => {
+    getWords(letters)
+  };
+
   return (
     <>
       <PhoneScreen />
-      <KeyboardContainer keysMap={keysMap} />
+      <KeyboardContainer
+        keysMap={keysMap}
+        handleNumberClick={handleNumberClick}
+      />
     </>
   );
 };

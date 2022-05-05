@@ -2,7 +2,7 @@ import { Grid } from "@kiwicom/orbit-components";
 import Button from "@kiwicom/orbit-components/lib/primitives/ButtonPrimitive";
 import KeyboardButton from "../KeyboardButton/KeyboardButton";
 
-const KeyboardContainer = ({ keysMap }: any) => {
+const KeyboardContainer = ({ keysMap,handleNumberClick }: any) => {
   return (
     <Grid
       columns="repeat(3, 1fr)"
@@ -12,7 +12,7 @@ const KeyboardContainer = ({ keysMap }: any) => {
     >
     
       {Object.keys(keysMap).map((keyNumber) => {
-        return <KeyboardButton keyNumber={keyNumber} letters={keysMap[keyNumber]}></KeyboardButton>;
+        return <KeyboardButton key={keyNumber} handleNumberClick={handleNumberClick} keyNumber={keyNumber} letters={keysMap[keyNumber]}></KeyboardButton>;
       })}
     </Grid>
   );
