@@ -6,7 +6,7 @@ You can find the kanban board of this project [here](https://github.com/basilisS
 
 ## Teck Stack
 
-The project is build with [React](https://reactjs.org/). It uses [jest](https://jestjs.io/) and [testing-library](https://testing-library.com/) for testing. It also uses [ORBIT](https://orbit.kiwi/) for styling.
+The project is build with [React](https://reactjs.org/). It uses [jest](https://jestjs.io/) and [testing-library](https://testing-library.com/) for testing. It also uses [ORBIT](https://orbit.kiwi/) for styling, [GraphQL](https://graphql.org/) and [Apollo](https://www.apollographql.com/).
 
 For continuous integration and continuous deployment it uses [Netlify CI/CD](https://www.netlify.com/). The project has been deployed here: 
 
