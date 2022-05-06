@@ -1,6 +1,6 @@
 # Kiwi [![Netlify Status](https://api.netlify.com/api/v1/badges/4ad819c2-6f2e-48d3-a0ba-95b253579712/deploy-status)](https://app.netlify.com/sites/kiwi-interview/deploys) [![Known Vulnerabilities](https://snyk.io/test/github/basilisSam/Kiwi/badge.svg)](https://snyk.io/test/github/basilisSam/Kiwi) [![Codacy Badge](https://app.codacy.com/project/badge/Grade/db399f123ac142dca21f76a93341ee77)](https://www.codacy.com/gh/basilisSam/Github-Issues/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=basilisSam/Github-Issues&amp;utm_campaign=Badge_Grade)
 
-This is a project done for Kiwi interview. Please find the instructions [here]().
+This is a project done for Kiwi interview. Please find the instructions [here](https://github.com/basilisSam/Kiwi/wiki/Kiwi-Assignment).
 
 You can find the kanban board of this project [here](https://github.com/basilisSam/Kiwi/projects/1).
 
