@@ -6,21 +6,8 @@ import {ApolloClient, ApolloProvider, InMemoryCache} from "@apollo/client";
 import {BrowserRouter} from 'react-router-dom';
 
 const client = new ApolloClient({
-  uri: 'https://api.github.com/graphql',
-  cache: new InMemoryCache({
-      typePolicies: {
-          Query: {
-              fields: {
-                  repository: {
-                      merge(existing, incoming) {
-                          return incoming;
-                      }
-                  },
-              }
-          }
-      }
-  }),
-
+  uri: 'https://kiwi-backend.herokuapp.com/graphql',
+  cache: new InMemoryCache({}),
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);

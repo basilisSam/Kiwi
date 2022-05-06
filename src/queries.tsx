@@ -1,28 +1,11 @@
-import {gql} from "@apollo/client"
+import { gql } from "@apollo/client";
 
+const GET_WORDS = gql`
+  query GET_WORDS($digits: Float!) {
+    words(digits: $digits) {
+      words
+    }
+  }
+`;
 
-const GET_ISSUE = gql`
-query GET_ISSUE($issueNumber: Int!) {
-    repository(owner:"reactjs", name:"reactjs.org") {
-      issue(number: $issueNumber) {
-            title
-            body
-            number
-            state
-            comments(first:2) {
-              edges{
-                  node{
-                      id
-                      body  
-                      publishedAt
-                  }
-              }
-            }
-        }
-      }
-    }`
-
-
-export {
-    GET_ISSUE
-}
+export { GET_WORDS };

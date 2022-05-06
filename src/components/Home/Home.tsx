@@ -1,10 +1,11 @@
+import { useQuery } from "@apollo/client";
+import { useState } from "react";
+import { GET_WORDS } from "../../queries";
 import { getWords } from "../../service/phoneWords";
 import KeyboardContainer from "../KeyboardContainer/KeyboardContainer";
 import PhoneScreen from "../PhoneScreen/PhoneScreen";
 
 const Home = () => {
-  
-
   const keysMap: any = {
     "1": ["📞"],
     "2": ["a", "b", "c"],
@@ -20,8 +21,12 @@ const Home = () => {
     "#": ["⬆"],
   };
 
+  const { loading, error, data } = useQuery(GET_WORDS, {
+    variables: { digits: 23 },
+  });
+
   const handleNumberClick = (letters: any) => {
-    getWords(letters)
+    getWords(letters);
   };
 
   return (
