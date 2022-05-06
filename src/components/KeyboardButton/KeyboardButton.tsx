@@ -11,7 +11,7 @@ const KeyboardButton = ({keyNumber,letters,handleNumberClick}:any) => {
   };
   return (
     <div style={divStyle}>
-   <Button onClick={() => handleNumberClick(letters)}>{keyNumber} {letters}</Button>
+   <Button onClick={() => handleNumberClick(keyNumber)}>{keyNumber} {letters}</Button>
   </div>
   )
 }
