@@ -1,19 +1,11 @@
-import { defaultTheme } from "@kiwicom/orbit-components";
 import Button from "@kiwicom/orbit-components/lib/Button";
 
-
-const KeyboardButton = ({keyNumber,letters,handleNumberClick}:any) => {
-  const divStyle:any = {
-    backgroundColor: `${defaultTheme.orbit.paletteCloudDark}`,
-    border: `1px solid ${defaultTheme.orbit.paletteProductDark}`,
-    boxSizing: "border-box",
-    padding: `${defaultTheme.orbit.paddingButtonSmall}`,
-  };
+const KeyboardButton = ({ keyNumber, letters, handleNumberClick }: any) => {
   return (
-    <div style={divStyle}>
-   <Button onClick={() => handleNumberClick(keyNumber)}>{keyNumber} {letters}</Button>
-  </div>
-  )
-}
+    <Button circled onClick={() => handleNumberClick(keyNumber)}>
+      {keyNumber} {letters}
+    </Button>
+  );
+};
 
-export default KeyboardButton
+export default KeyboardButton;

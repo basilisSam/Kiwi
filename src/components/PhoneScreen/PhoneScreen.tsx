@@ -2,11 +2,16 @@ import { Box } from "@kiwicom/orbit-components";
 
 const PhoneScreen = ({ data }: any) => {
   return (
-    <Box background='white' textAlign='center' padding='large' maxWidth='300px'>
-      {data?.words.words &&
-        data.words.words.map((word: string) => {
-          return <span>'{word}'</span>;
-        })}
+    <Box
+      background='white'
+      height='250px'
+      textAlign='center'
+      padding='small'
+      maxWidth='300px'
+      overflow='auto'
+      wrap='nowrap'
+    >
+      {data?.getWords.words && data.getWords.words.toString()}
     </Box>
   );
 };
