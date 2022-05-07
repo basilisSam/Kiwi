@@ -1,9 +1,10 @@
 import { useQuery } from "@apollo/client";
 import {
   Box,
-  defaultTheme, Layout,
+  defaultTheme,
+  Layout,
   LayoutColumn,
-  Loading
+  Loading,
 } from "@kiwicom/orbit-components";
 import { useState } from "react";
 import { GET_WORDS } from "../../queries";
@@ -32,7 +33,7 @@ const Home = () => {
   };
 
   const [digits, setDigits] = useState<string>("");
-  const keysMap: any = new Map([
+  const keysMap: Map<string, string[]> = new Map([
     ["1", ["📞"]],
     ["2", ["a", "b", "c"]],
     ["3", ["d", "e", "f"]],
@@ -51,7 +52,7 @@ const Home = () => {
     variables: { digits: Number(digits) },
   });
 
-  const handleNumberClick = (digit: string) => {
+  const handleNumberClick = (digit: string):void => {
     if (notValidKey(digit)) return;
     hashKeyClicked(digit) ? setDigits("") : setDigits(digits + digit);
   };

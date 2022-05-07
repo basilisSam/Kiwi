@@ -1,7 +1,12 @@
 import { Grid } from "@kiwicom/orbit-components";
 import KeyboardButton from "../KeyboardButton/KeyboardButton";
 
-const KeyboardContainer = ({ keysMap, handleNumberClick }: any) => {
+interface KeyboardContainerProps{
+  keysMap: Map<string, string[]>,
+  handleNumberClick:(digit: string) => void
+}
+
+const KeyboardContainer = ({ keysMap, handleNumberClick }: KeyboardContainerProps) => {
   return (
     <Grid
       columns='repeat(3, 1fr)'

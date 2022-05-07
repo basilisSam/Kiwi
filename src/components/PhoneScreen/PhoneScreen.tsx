@@ -1,6 +1,18 @@
 import { Box } from "@kiwicom/orbit-components";
 
-const PhoneScreen = ({ data }: any) => {
+interface PhoneScreenProps{
+  data:WordsContainer
+}
+
+interface WordsContainer {
+  getWords:WordsEntity
+}
+
+interface  WordsEntity {
+  words:string []
+}
+
+const PhoneScreen = ({ data }: PhoneScreenProps) => {
   return (
     <Box
       background='white'

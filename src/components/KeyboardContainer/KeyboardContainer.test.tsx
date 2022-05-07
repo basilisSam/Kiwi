@@ -9,7 +9,7 @@ let handleNumberClick = jest.fn();
 const keysMap: any = new Map([["2", ["a", "b", "c"]]]);
 
 it("should render letters and key number into a button", () => {
-  render(<KeyboardContainer keysMap={keysMap} />);
+  render(<KeyboardContainer keysMap={keysMap}  handleNumberClick={jest.fn()}/>);
 
   screen.getByText("2 abc");
   screen.getByRole("button");
