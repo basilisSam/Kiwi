@@ -1,5 +1,4 @@
 import { Grid } from "@kiwicom/orbit-components";
-import Button from "@kiwicom/orbit-components/lib/primitives/ButtonPrimitive";
 import KeyboardButton from "../KeyboardButton/KeyboardButton";
 
 const KeyboardContainer = ({ keysMap, handleNumberClick }: any) => {

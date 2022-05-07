@@ -1,11 +1,9 @@
 import { useQuery } from "@apollo/client";
 import {
   Box,
-  defaultTheme,
-  Grid,
-  Layout,
+  defaultTheme, Layout,
   LayoutColumn,
-  Loading,
+  Loading
 } from "@kiwicom/orbit-components";
 import { useState } from "react";
 import { GET_WORDS } from "../../queries";
