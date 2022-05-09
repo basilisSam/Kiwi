@@ -1,14 +1,14 @@
 import { Box } from "@kiwicom/orbit-components";
 
-interface PhoneScreenProps{
+export interface PhoneScreenProps{
   data:WordsContainer
 }
 
-interface WordsContainer {
+export interface WordsContainer {
   getWords:WordsEntity
 }
 
-interface  WordsEntity {
+export interface  WordsEntity {
   words:string []
 }
 

@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import {
   Box,
   defaultTheme,
+  Inline,
   Layout,
   LayoutColumn,
   Loading,
@@ -10,12 +11,13 @@ import { useState } from "react";
 import { GET_WORDS } from "../../queries";
 import KeyboardContainer from "../KeyboardContainer/KeyboardContainer";
 import PhoneScreen from "../PhoneScreen/PhoneScreen";
+import logo from "../../logo.png";
 
 const Home = () => {
   const phoneDivStyle: any = {
     border: `1px solid  #d1d1e0`,
     boxSizing: "border-box",
-    padding: `12px`,
+    padding: `10px`,
     borderRadius: `25px`,
     width: "350px",
     wordWrap: "break-word",
@@ -52,7 +54,7 @@ const Home = () => {
     variables: { digits: Number(digits) },
   });
 
-  const handleNumberClick = (digit: string):void => {
+  const handleNumberClick = (digit: string): void => {
     if (notValidKey(digit)) return;
     hashKeyClicked(digit) ? setDigits("") : setDigits(digits + digit);
   };
@@ -67,6 +69,15 @@ const Home = () => {
 
   return (
     <Layout type='MMB'>
+      <Inline justify='center'>
+        <img
+          data-testid='logo'
+          style={{ width: "200px", marginBottom: "50px" }}
+          src={logo}
+          alt='My logo'
+        />
+      </Inline>
+
       <LayoutColumn>
         <Box
           borderRadius='circle'
@@ -81,9 +92,11 @@ const Home = () => {
           <div style={phoneDivStyle}>
             <div style={phoneScreenDivStyle}>
               {loading ? (
-                <Loading type='boxLoader' />
+                <div data-testid='loadingComponent'>
+                  <Loading type='boxLoader' />
+                </div>
               ) : error ? (
-                <h1>An has occurred!</h1>
+                <h1>An error has occurred!</h1>
               ) : (
                 <PhoneScreen data={data} />
               )}
