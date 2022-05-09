@@ -2,16 +2,15 @@ import { useQuery } from "@apollo/client";
 import {
   Box,
   defaultTheme,
-  Inline,
   Layout,
   LayoutColumn,
   Loading,
 } from "@kiwicom/orbit-components";
 import { useState } from "react";
 import { GET_WORDS } from "../../queries";
+import Banner from "../Banner/Banner";
 import KeyboardContainer from "../KeyboardContainer/KeyboardContainer";
 import PhoneScreen from "../PhoneScreen/PhoneScreen";
-import logo from "../../logo.png";
 
 const Home = () => {
   const phoneDivStyle: any = {
@@ -69,15 +68,7 @@ const Home = () => {
 
   return (
     <Layout type='MMB'>
-      <Inline justify='center'>
-        <img
-          data-testid='logo'
-          style={{ width: "200px", marginBottom: "50px" }}
-          src={logo}
-          alt='My logo'
-        />
-      </Inline>
-
+      <Banner />
       <LayoutColumn>
         <Box
           borderRadius='circle'

@@ -1,16 +1,13 @@
-import {
-  cleanup,
-  fireEvent,
-  render,
-  screen,
-  waitFor,
-} from "@testing-library/react";
-import { afterEach, it } from "@jest/globals";
-import Home from "./Home";
-import { GET_WORDS } from "../../queries";
-import { GraphQLError } from "graphql";
 import { MockedProvider } from "@apollo/react-testing";
-import { PhoneScreenProps } from "../PhoneScreen/PhoneScreen";
+import { afterEach, it } from "@jest/globals";
+import {
+  cleanup, render,
+  screen,
+  waitFor
+} from "@testing-library/react";
+import { GraphQLError } from "graphql";
+import { GET_WORDS } from "../../queries";
+import Home from "./Home";
 
 afterEach(cleanup);
 
