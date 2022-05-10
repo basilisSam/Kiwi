@@ -1,10 +1,6 @@
 import { MockedProvider } from "@apollo/react-testing";
 import { afterEach, it } from "@jest/globals";
-import {
-  cleanup, render,
-  screen,
-  waitFor
-} from "@testing-library/react";
+import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import { GraphQLError } from "graphql";
 import { GET_WORDS } from "../../queries";
 import Home from "./Home";
@@ -48,7 +44,9 @@ it("should render Home component and check if response data appear to screen", a
   );
 
   await waitFor(() => {
-    screen.getByText("a,b,c");
+    screen.getByText("a");
+    screen.getByText("b");
+    screen.getByText("c");
   });
 });
 

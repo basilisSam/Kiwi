@@ -12,5 +12,7 @@ it("should render PhoneScreen and print letters into the screen", () => {
   };
   render(<PhoneScreen {...props} />);
 
-  screen.getByText("a,b,c");
+  screen.getByText("a");
+  screen.getByText("b");
+  screen.getByText("c");
 });

@@ -37,6 +37,7 @@ const PhoneScreen = ({ data }: PhoneScreenProps) => {
           maxWidth='100px'
           minWidth='100px'
           justify='center'
+          key={index}
         >
           {word}
         </Box>
