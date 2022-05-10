@@ -1,4 +1,4 @@
-import { Box, Card } from "@kiwicom/orbit-components";
+import { Box } from "@kiwicom/orbit-components";
 
 export interface PhoneScreenProps {
   data: WordsContainer;
