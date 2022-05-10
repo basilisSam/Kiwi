@@ -1,15 +1,15 @@
-import { Box } from "@kiwicom/orbit-components";
+import { Box, Card } from "@kiwicom/orbit-components";
 
-export interface PhoneScreenProps{
-  data:WordsContainer
+export interface PhoneScreenProps {
+  data: WordsContainer;
 }
 
 export interface WordsContainer {
-  getWords:WordsEntity
+  getWords: WordsEntity;
 }
 
-export interface  WordsEntity {
-  words:string []
+export interface WordsEntity {
+  words: string[];
 }
 
 const PhoneScreen = ({ data }: PhoneScreenProps) => {
@@ -23,7 +23,24 @@ const PhoneScreen = ({ data }: PhoneScreenProps) => {
       overflow='auto'
       wrap='nowrap'
     >
-      {data?.getWords.words && data.getWords.words.toString()}
+      {/* {data?.getWords.words && data.getWords.words.toString()} */}
+
+      {data?.getWords.words?.map((word: string, index: number) => (
+        <Box
+          background='cloudNormalHover'
+          textAlign='center'
+          padding='small'
+          margin='XSmall'
+          borderRadius='normal'
+          display='inline-flex'
+          width='auto'
+          maxWidth='100px'
+          minWidth='100px'
+          justify='center'
+        >
+          {word}
+        </Box>
+      ))}
     </Box>
   );
 };

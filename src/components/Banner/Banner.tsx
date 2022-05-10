@@ -6,7 +6,7 @@ const Banner = () => {
     <Inline justify='center'>
         <img
           data-testid='logo'
-          style={{ width: "200px", marginBottom: "50px" }}
+          style={{ width: "200px" }}
           src={logo}
           alt='My logo'
         />
